@@ -9,8 +9,8 @@ const consoleTable = require('console.table');
 const db = mysql.createConnection({
     host: 'localhost',
     port: 3001,
-    user: 'root',
-    password: 'preston',
+    user: '',
+    password: '',
     database: 'eTracker_db'
 },
 console.log(`Connection to database successful!`)
@@ -21,7 +21,7 @@ startApp();
 
 
 function startApp() {
-    inquirer.createPromptModule([{
+    inquirer.prompt([{
         type: 'list',
         name: 'action',
         message: 'choose from the options below...',
